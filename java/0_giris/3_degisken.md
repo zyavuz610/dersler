@@ -4,6 +4,13 @@ Bu rehber, Java programlama dilinde değişken kavramını, değişken tanımlam
 
 ---
 
+> 📖 **İlgili Bölüm Dokümanları:**
+> - ☕ [1. Java Dünyasına Giriş ve OOP (1_java_giris.md)](./1_java_giris.md)
+> - 🐧 [2. Temel Linux Komutları (2_linux.md)](./2_linux.md)
+> - 🔒 [4. Sabitler ve Literaller (4_sabitler.md)](./4_sabitler.md)
+
+---
+
 ## 📌 İçindekiler
 1. [Değişken (Variable) Nedir?](#1-değişken-variable-nedir)
 2. [Değişken Tanımlama ve Değer Atama](#2-değişken-tanımlama-ve-değer-atama)
