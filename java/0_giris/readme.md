@@ -1,226 +1,63 @@
-# 0. Giriş: Java Dünyasına Adım ve Nesneye Dayalı Programlama (OOP)
+# 0. Giriş: Java Programlamaya Giriş Modülü
 
-Bu doküman, Java programlama diline giriş yapan öğrenciler ve eğitmenler için hazırlanmıştır. Java'nın temel felsefesini, **"Java'da her şeyin bir sınıf ve nesne yapısı içinde var olması"** mantığını, örnek bir program üzerinden bileşenlerini ve kodun nasıl derlenip çalıştırıldığını açıklar.
-
----
-
-> 📖 **Ders Rehberleri:**
-> - 🐧 [Linux Komutları ve Terminal Kullanımı (linux.md)](file:///c:/Users/asus/Documents/GitHub/dersler/java/0_giris/linux.md)
-> - 📦 [Değişkenler, Veri Tipleri ve Hatalar (degisken.md)](file:///c:/Users/asus/Documents/GitHub/dersler/java/0_giris/degisken.md)
+Bu dizin, **Java Programlama Dersi** için hazırlanan başlangıç modülüdür. Java'nın çalışma prensiplerini, Nesneye Dayalı Programlama (OOP) temellerini, geliştirme ortamlarında kullanılan temel Linux terminal komutlarını ve değişkenler konusunu adım adım ele alan kapsamlı ders dokümanlarını ve örnek kodları barındırır.
 
 ---
 
-## 📌 İçindekiler
-1. [Java'nın Felsefesi: "Her Şey Bir Nesnedir"](#1-javanın-felsefesi-her-şey-bir-nesnedir)
-2. [Nesneye Dayalı Programlama (OOP) Mantığı](#2-nesneye-dayalı-programlama-oop-mantığı)
-   - [Sınıf (Class) ve Nesne (Object) İlişkisi](#sınıf-class-ve-nesne-object-ilişkisi)
-   - [OOP'nin 4 Temel İlkesi](#oopnin-4-temel-ilkesi)
-3. [Örnek Java Programı ve Satır Satır İnceleme](#3-örnek-java-programı-ve-satır-satır-inceleme)
-   - [Merhaba Dünya (Main.java)](#merhaba-dünya-mainjava)
-   - [OOP Mantığını Gösteren İkinci Bir Örnek](#oop-mantığını-gösteren-ikinci-bir-örnek)
-4. [Java'nın Çalışma Mantığı: Derleme ve Çalıştırma](#4-javanın-çalışma-mantığı-derleme-ve-çalıştırma)
-   - [JDK, JRE ve JVM İlişkisi](#jdk-jre-ve-jvm-ilişkisi)
-   - [Komut Satırında (Terminal) Derleme ve Çalıştırma](#komut-satırında-terminal-derleme-ve-çalıştırma)
-5. [Yeni Başlayanlar İçin Önemli Kurallar ve Sık Yapılan Hatalar](#5-yeni-başlayanlar-için-önemli-kurallar-ve-sık-yapılan-hatalar)
+## 🧭 Konu Anlatımı ve Ders Rehberleri İndeksi
 
----
-
-## 1. Java'nın Felsefesi: "Her Şey Bir Nesnedir"
-
-C veya Python gibi dillerde boş bir metin dosyası açıp doğrudan:
-```python
-# Python'da sınıf tanımlamadan tek satır çalıştırılabilir:
-print("Merhaba Dünya")
-```
-yazabilirsiniz. Ancak **Java'da bu mümkün değildir**.
-
-Java saf bir **Nesne Yönelimli Programlama (OOP)** dilidir. Java'da:
-- Yazacağınız **tek bir satır kod bile mutlaka bir sınıfın (`class`) sınırları içinde** yer almak zorundadır.
-- Programın kendisi, fonksiyonları (metotları) ve verileri (alanları) sınıf yapılarının içine paketlenir.
-- Konsola yazı yazdıran standart komut bile (`System.out.println`) aslında `System` sınıfındaki statik bir nesne referansı olan `out` üzerinden çağrılan bir metottur.
-
-> 💡 **Özetle:** Java'da hiçbir kod parçası "başıboş" veya sınıflardan bağımsız yaşayamaz. Programın başlangıç noktası (`main` metodu) bile bir sınıfın üyesidir.
-
----
-
-## 2. Nesneye Dayalı Programlama (OOP) Mantığı
-
-Gerçek dünyada etrafımızda gördüğümüz her şey birer nesnedir: bir araba, bir öğrenci, bir banka hesabı, bir masa... Her nesnenin:
-1. **Durumu / Özellikleri (State / Fields):** Rengi, yaşı, modeli, bakiyesi.
-2. **Davranışları (Behaviors / Methods):** Çalışması, hızlanması, para çekmesi, ses çıkarması.
-
-### Sınıf (Class) ve Nesne (Object) İlişkisi
-
-* **Sınıf (Class):** Bir nesnenin nasıl olacağını tarif eden mimari plan, şablon veya kalıptır. Tek başına hafızada yer tutmaz, sadece bir tanımdır.
-* **Nesne (Object / Instance):** O kalıp kullanılarak bellekte (`Heap`) somut olarak üretilmiş örnektir.
+Aşağıdaki sırayı takip ederek modülü eksiksiz bir şekilde tamamlayabilirsiniz:
 
 ```mermaid
-classDiagram
-    class Araba {
-        +String marka
-        +String model
-        +int hiz
-        +calis()
-        +hizlan(miktar)
-        +frenYap()
-    }
+flowchart TD
+    M1["1. Bölüm: Java'ya Giriş & OOP Mantığı<br>(1_java_giris.md)"] --> M2["2. Bölüm: Temel Linux Komutları<br>(2_linux.md)"]
+    M2 --> M3["3. Bölüm: Değişkenler & Veri Tipleri<br>(3_degisken.md)"]
     
-    note for Araba "Sınıf (Kalıp / Şablon)"
+    style M1 fill:#f9f,stroke:#333,stroke-width:1px
+    style M2 fill:#bbf,stroke:#333,stroke-width:1px
+    style M3 fill:#dfd,stroke:#333,stroke-width:1px
 ```
 
-Aynı `Araba` sınıf kalıbından dilediğimiz kadar farklı nesne (`araba1: Kırmızı BMW`, `araba2: Beyaz Renault`) üretebiliriz.
+| No | Konu Başlığı | Dosya | Açıklama ve Kapsam |
+| :---: | :--- | :--- | :--- |
+| **01** | **Java Dünyası & OOP Mantığı** | [1_java_giris.md](./1_java_giris.md) | • Java'da programın kendisinin bile nesne/sınıf olması<br>• Sınıf (*Class*) ve Nesne (*Object*) kavramları<br>• OOP'nin 4 temel ilkesi (*Encapsulation, Inheritance, vb.*)<br>• `Main.java` analizi (`public`, `static`, `void`, `main`)<br>• JDK, JRE, JVM ilişkisi ve `javac` / `java` komutları |
+| **02** | **Temel Linux & Terminal Rehberi** | [2_linux.md](./2_linux.md) | • Dizin gezinme ve listeleme (`pwd`, `ls`, `cd`, `clear`)<br>• Dosya/klasör yönetimi (`mkdir`, `touch`, `cp`, `mv`, `rm`)<br>• Dosya içeriği okuma (`cat`, `less`, `head`, `tail`)<br>• Sistem ve Java sürüm sorgulama (`cat /etc/os-release`, `which`)<br>• Terminal kısayolları (`Tab`, `Ctrl+C`, `Ctrl+L`) |
+| **03** | **Değişkenler & Veri Tipleri** | [3_degisken.md](./3_degisken.md) | • Değişken tanımlama (*declaration*) ve değer atama (*initialization*)<br>• İsimlendirme kuralları ve `camelCase` standardı<br>• 8 İlkel (*Primitive*) tip ve `String` nesnesi<br>• Stack vs. Heap bellek çalışma mantığı<br>• Sabit verilerle **Not Ortalaması Hesaplama** programı<br>• En sık yapılan derleme hataları ve tuzaklar |
 
-### OOP'nin 4 Temel İlkesi
+---
 
-| İlke | Türkçe Adı | Açıklama |
+## 💻 Dizindeki Örnek Java Kodları
+
+Ders anlatımlarında kullanılan ve bu dizinde yer alan çalıştırılabilir Java kaynak kodları:
+
+| Kaynak Dosya | İlgili Konu | Açıklama |
 | :--- | :--- | :--- |
-| **Encapsulation** | Kapsülleme | Verilerin (değişkenlerin) doğrudan dışarıdan değiştirilmesini engelleyip metotlar (`getter`/`setter`) aracılığıyla güvenli erişim sağlama. |
-| **Inheritance** | Kalıtım / Miras | Bir sınıfın başka bir sınıftan ortak özellikleri ve davranışları devralması (`extends`). |
-| **Polymorphism** | Çok Biçimlilik | Bir metodun farklı sınıflarda farklı biçimlerde davranabilmesi (ör. `Hayvan.sesCikar()` metodunun `Kopek` için havlama, `Kedi` için miyavlama olması). |
-| **Abstraction** | Soyutlama | Karmaşık sistem detaylarını gizleyip sadece gerekli ve önemli arayüzü sunma (`abstract class`, `interface`). |
+| [`Main.java`](./Main.java) | İlk Program | Java'nın en temel yapısı, `main` metodu ve konsola `Merhaba Dünya` yazdırma. |
+| [`Selam.java`](./Selam.java) | Çıktı & Yorumlar | `System.out.println()` ile `System.out.print()` arasındaki farklar, tek satırlı (`//`) ve çok satırlı (`/* */`) yorum kullanımı. |
+| [`Degisken.java`](./Degisken.java) | Değişken Tipleri | `int`, `float`, `char`, `String`, `boolean`, `byte` türlerinin tanımlanması ve metin birleştirme (*concatenation*). |
+| [`konular.md`](./konular.md) | Ders İzlencesi | Ders müfredatı, önerilen kaynak kitap, temel komut notları ve pratik alıştırma yönergeleri. |
 
 ---
 
-## 3. Örnek Java Programı ve Satır Satır İnceleme
+## ⚡ Hızlı Başlangıç: Kodları Nasıl Derleyip Çalıştırırsınız?
 
-### Merhaba Dünya (`Main.java`)
-
-Aşağıda Java'da yazılabilecek en temel program yer almaktadır:
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        // Bu bir yorum satırıdır; derleyici tarafından yok sayılır.
-        System.out.println("Merhaba Dünya");
-    }
-}
-```
-
-#### Satır Satır Açıklama:
-
-1. **`public class Main`**
-   - `public`: Bu sınıfa diğer paketlerden ve dış dünyadan (en önemlisi JVM'den) serbestçe erişilebileceğini belirtir (erişim belirteci).
-   - `class`: Yeni bir sınıf tanımı başlatır.
-   - `Main`: Sınıfımızın adıdır. **Kural:** Dosya adı ile `public` sınıfın adı birebir aynı olmalıdır (`Main.java`).
-
-2. **`public static void main(String[] args)`**
-   - Bu, Java programlarının **başlangıç kapısıdır (entry point)**. JVM programı başlatırken doğrudan bu imzaya sahip metodu arar.
-   - `public`: JVM sınıf dışından bu metoda erişebilmelidir.
-   - `static`: **En kritik kelime!** Henüz `Main` sınıfından hiçbir nesne (`new Main()`) üretilmemişken dahi JVM'in bu metodu doğrudan çağırabilmesini sağlar.
-   - `void`: Bu metodun işini bitirdiğinde geriye herhangi bir değer döndürmeyeceğini ifade eder.
-   - `main`: Başlangıç metodunun özel adıdır.
-   - `String[] args`: Programa komut satırından parametre/argüman aktarmak için kullanılan dizi parametresidir.
-
-3. **`System.out.println("Merhaba Dünya");`**
-   - `System`: Java'nın standart kütüphanesinde bulunan yerleşik bir sistem sınıfıdır.
-   - `out`: Standart çıktı akışını (konsolu) temsil eden statik nesne referansıdır.
-   - `println`: Konsola metni yazdıran ve ardından imleci bir alt satıra geçiren (print line) metottur.
-   - `;`: Java'da her ifade satırı mutlaka noktalı virgül ile sonlandırılmalıdır.
-
----
-
-### OOP Mantığını Gösteren İkinci Bir Örnek
-
-Java'da nesnelerin nasıl tanımlandığını ve kullanıldığını anlamak için basit bir model:
-
-```java
-// Sınıf (Kalıp)
-class Ogrenci {
-    String ad;
-    int numara;
-
-    void selamVer() {
-        System.out.println("Merhaba, ben " + ad + ", numaram: " + numara);
-    }
-}
-
-// Programın Çalıştığı Ana Sınıf
-public class OkulProgrami {
-    public static void main(String[] args) {
-        // 'new' anahtar kelimesi ile kalıptan bir nesne (örnek) üretiyoruz:
-        Ogrenci ogr1 = new Ogrenci();
-        ogr1.ad = "Ahmet";
-        ogr1.numara = 101;
-        ogr1.selamVer(); // Çıktı: Merhaba, ben Ahmet, numaram: 101
-
-        Ogrenci ogr2 = new Ogrenci();
-        ogr2.ad = "Ayşe";
-        ogr2.numara = 102;
-        ogr2.selamVer(); // Çıktı: Merhaba, ben Ayşe, numaram: 102
-    }
-}
-```
-
----
-
-## 4. Java'nın Çalışma Mantığı: Derleme ve Çalıştırma
-
-Java'nın en ünlü sloganı: **"Write Once, Run Anywhere" (Bir Kez Yaz, Her Yerde Çalıştır)** prensibidir.
-
-Java kodu doğrudan işletim sisteminin makine koduna (0 ve 1'lere) derlenmez. Bunun yerine platformdan bağımsız ara bir formata, yani **Bayt Kodu (Bytecode)** formatına dönüştürülür.
-
-### JDK, JRE ve JVM İlişkisi
-
-```mermaid
-flowchart LR
-    A["Kaynak Kod (.java)"] -->|javac ile derlenir| B["Bayt Kodu (.class)"]
-    B -->|java komutu ile| C["JVM (Java Sanal Makinesi)"]
-    C --> D["Windows / Linux / macOS"]
-```
-
-* **JVM (Java Virtual Machine):** Bayt kodunu okuyup o an çalışan işletim sisteminin anlayacağı makine koduna çeviren sanal makinedir.
-* **JRE (Java Runtime Environment):** JVM + Java'nın standart kütüphanelerini içerir (yalnızca hazır programları çalıştırmak içindir).
-* **JDK (Java Development Kit):** JRE + Geliştirici araçlarını içerir (derleyici `javac`, hata ayıklayıcı vb.). Kod yazmak ve derlemek için JDK şarttır.
-
----
-
-### Komut Satırında (Terminal) Derleme ve Çalıştırma
-
-> 💡 *Terminalde klasör açma, dosya listeleme ve gezinme komutları için [linux.md](file:///c:/Users/asus/Documents/GitHub/dersler/java/0_giris/linux.md) rehberine göz atabilirsiniz.*
-
-Bir Java programını komut satırından derleyip çalıştırmak için 2 temel adım izlenir:
-
-#### 1. Adım: Derleme (`javac`)
-Yazdığımız insan tarafından okunabilir `.java` dosyasını derleyiciye veririz:
+Terminali (Komut İstemi / Bash) bu dizin (`0_giris`) içinde açtıktan sonra:
 
 ```bash
+# 1. Kaynak kodu bayt koduna (.class) derleyin:
 javac Main.java
-```
 
-* Bu komut başarılı olursa terminalde çıktı vermez.
-* Bulunduğunuz klasörde **`Main.class`** isimli yeni bir dosya oluşur. Bu dosya Java Bayt Kodudur.
-
-#### 2. Adım: Çalıştırma (`java`)
-Üretilen bayt kodunu JVM üzerinde çalıştırmak için `java` komutuna sınıfın adı verilir:
-
-```bash
+# 2. Üretilen sınıfı JVM üzerinde çalıştırın (uzantısız!):
 java Main
 ```
 
-> ⚠️ **DİKKAT:** Çalıştırırken dosya uzantısı olan `.class` yazılmaz! Sadece sınıf adı (`Main`) yazılır.
-
-#### Komut Satırı Çıktısı:
-```text
-Merhaba Dünya
-```
-
 ---
 
-## 5. Yeni Başlayanlar İçin Önemli Kurallar ve Sık Yapılan Hatalar
+## 🎯 Modül Öğrenim Kazanımları
 
-1. **Dosya Adı ile Sınıf Adı Birebir Eşleşmelidir:**
-   - Eğer sınıfınız `public class Main` ise, dosyanızın adı mutlaka `Main.java` olmalıdır. `main.java` (küçük harfle) yazmak büyük-küçük harfe duyarlı işletim sistemlerinde derleme hatası verir.
-2. **Java Büyük/Küçük Harfe Duyarlıdır (Case-Sensitive):**
-   - `main`, `Main`, `MAIN` Java için tamamen farklı şeylerdir.
-   - Metot başlangıcı mutlaka küçük `main` olmalıdır.
-3. **Noktalı Virgül (`;`) Zorunluluğu:**
-   - Her komut satırının sonuna `;` konulmalıdır. Blok başlangıç ve bitiş parantezlerinin (`{ }`) sonuna noktalı virgül konmaz.
-4. **Çalıştırma Hatası (`java Main.class` Yanılgısı):**
-   - Hatalı: `java Main.class` ❌
-   - Doğru: `java Main` ✅
-5. **Static Metot Kuralı:**
-   - `main` metodu `static` olduğu için, bu metodun içinden sınıf düzeyindeki diğer metot ve değişkenlere doğrudan erişmek için onların da `static` olması veya sınıfın bir nesnesinin (`new`) oluşturulması gerekir.
-6. **Parantezleme Hataları ve Dengesiz Parantez Kullanımı (`{ }`, `( )`, `[ ]`):**
-   - Açılan her süslü parantez (`{`), normal parantez (`(`) ve köşeli parantez (`[`) mutlaka eşiyle kapatılmalıdır.
-   - Özellikle sınıf ve metot bloklarını belirleyen süslü parantezlerin (`{ }`) eksik bırakılması veya fazladan yazılması; `reached end of file while parsing` ya da `class, interface, or enum expected` gibi yeni başlayanların en sık karşılaştığı derleme hatalarına sebep olur.
-   - **İpucu:** Kod girintilemesine (indentation) özen göstermek, hangi parantezin nerede açılıp kapandığını görmeyi çok kolaylaştırır.
+Bu modülü tamamlayan bir öğrenci:
+1. Java'nın neden saf bir nesne yönelimli dil olduğunu ve her kodun neden bir sınıf içinde var olması gerektiğini anlar.
+2. `javac` derleyicisi ile kaynak koddan (`.java`) ara bayt kodu (`.class`) oluşturmayı ve `java` komutuyla JVM üzerinde çalıştırmayı öğrenir.
+3. Linux / Terminal komutlarıyla dosya ve klasörleri hatasız yönetebilir.
+4. Java'nın ilkel veri tipleri ile referans tipleri arasındaki temel farkları, bellek kullanımını (Stack/Heap) ve değişken isimlendirme standartlarını kavrar.
+5. Değişken tanımlarken yapılan yaygın hataları (ilk değer atamama, parantez dengesizliği, tür uyumsuzluğu, tam sayı bölmesi tuzağı) hızlıca fark edip düzeltebilir.

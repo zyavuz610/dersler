@@ -1,6 +1,6 @@
 # Java'da Değişkenler ve Veri Tipleri Rehberi
 
-Bu rehber, Java programlama dilinde değişken kavramını, değişken tanımlama kurallarını, ilkel (primitive) ve referans veri tiplerini, ders kapsamında hazırlanan [`Selam.java`](file:///c:/Users/asus/Documents/GitHub/dersler/java/0_giris/Selam.java) ve [`Degisken.java`](file:///c:/Users/asus/Documents/GitHub/dersler/java/0_giris/Degisken.java) örneklerinin incelemesini, sabit değerlerle not ortalaması hesaplayan örnek bir uygulamayı ve programlamaya yeni başlayanların en sık yaptığı hataları kapsamlı olarak ele almaktadır.
+Bu rehber, Java programlama dilinde değişken kavramını, değişken tanımlama kurallarını, ilkel (primitive) ve referans veri tiplerini, ders kapsamında hazırlanan [`Selam.java`](./Selam.java) ve [`Degisken.java`](./Degisken.java) örneklerinin incelemesini, sabit değerlerle not ortalaması hesaplayan örnek bir uygulamayı ve programlamaya yeni başlayanların en sık yaptığı hataları kapsamlı olarak ele almaktadır.
 
 ---
 
@@ -191,7 +191,7 @@ Ders dizininde yer alan örnek kodların detaylı açıklamaları:
 
 ### `Selam.java`: Çıktı ve Yorum Satırları
 
-[`Selam.java`](file:///c:/Users/asus/Documents/GitHub/dersler/java/0_giris/Selam.java) dosyası Java'da konsola yazdırma metotlarını ve yorum satırlarını gösterir:
+[`Selam.java`](./Selam.java) dosyası Java'da konsola yazdırma metotlarını ve yorum satırlarını gösterir:
 
 ```java
 public class Selam {
@@ -227,7 +227,7 @@ public class Selam {
 
 ### `Degisken.java`: Türler ve Birleştirme
 
-[`Degisken.java`](file:///c:/Users/asus/Documents/GitHub/dersler/java/0_giris/Degisken.java) dosyasında farklı veri türleri tanımlanmış ve ekrana yazdırılmıştır:
+[`Degisken.java`](./Degisken.java) dosyasında farklı veri türleri tanımlanmış ve ekrana yazdırılmıştır:
 
 ```java
 public class Degisken {
