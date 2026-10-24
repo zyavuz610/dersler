@@ -29,6 +29,7 @@ Bu rehber, Java programlama dilinde metinsel verileri temsil eden **`String` sı
    - [I. Tür Dönüştürme (`String.valueOf`)](#i-tür-dönüştürme)
 5. [Örnek Kod: MyString.java Programı](#5-örnek-kod-mystringjava-programı)
 6. [En Çok Yapılan Hatalar ve Tuzaklar](#6-en-çok-yapılan-hatalar-ve-tuzaklar)
+7. [Alıştırmalar ve Örnek Ödev Programları](#7-alıştırmalar-ve-örnek-ödev-programları)
 
 ---
 
@@ -265,3 +266,34 @@ java MyString
 4. **`NullPointerException`:**
    - Eğer bir String değişkenine değer atanmamışsa (`String s = null;`), üzerinde `s.length()` veya `s.equals(...)` çağırmak programı anında çökertir.
    - İpucu: Sabit bir metinle kıyaslama yaparken `s.equals("admin")` yerine `"admin".equals(s)` yazmak `NullPointerException` hatasını otomatik önler.
+
+---
+
+## 7. Alıştırmalar ve Örnek Ödev Programları
+
+### ✍️ Pratik Sınıf İçi Alıştırmalar:
+1. **İsim Formatlayıcı:** Düzensiz girilmiş bir tam adı (Örn: `String adSoyad = "   zafer   yavuz   ";`) `trim()`, `substring()` ve `toUpperCase()` kullanarak `"Zafer Yavuz"` formatına getiren kod satırlarını yazınız.
+2. **E-Posta Doğrulama:** Bir e-posta adresinin (`"ogrenci@universite.edu.tr"`) geçerli bir üniversite adresi olup olmadığını `contains("@")` ve `endsWith(".edu.tr")` ile kontrol eden tek satırlık bir `boolean gecerliMi = ...;` ifadesi yazınız.
+3. **Karakter Değişimi:** Bir metindeki tüm Türkçe karakterleri İngilizce karşılıklarıyla (örn: `ç` ➡️ `c`, `ş` ➡️ `s`, `ğ` ➡️ `g`) değiştiren peş peşe `.replace()` zinciri kurunuz.
+
+### 📋 Ödev Programları ve Proje Konuları:
+
+#### Ödev 1: Hassas Bilgi Maskeleme Programı (`MetinMaskeleme.java`)
+- **Gereksinimler:**
+  - Kod içinde sabit tanımlanmış 11 haneli bir TC Kimlik Numarası (`"12345678901"`) ve 16 haneli bir Kredi Kartı Numarası (`"5528-1234-5678-9012"`) alınız.
+  - TC Kimlik numarasının ilk 3 ve son 2 hanesini açık bırakıp aradaki 6 haneyi yıldızlayınız (`"123******01"`).
+  - Kredi kartı numarasındaki tireleri `replace("-", "")` ile kaldırıp sadece son 4 hanesini gösteriniz (`"************9012"`).
+  - Yöntem: `substring()` ve `length()` metotlarını dinamik olarak kullanınız.
+
+#### Ödev 2: Cümle ve Kelime Analiz Aracı (`KelimeAnaliz.java`)
+- **Gereksinimler:**
+  - Sabit bir paragraf metni tanımlayınız (Örn: `"Java nesneye dayalı, güvenli ve platformdan bağımsız güçlü bir programlama dilidir."`).
+  - Metnin toplam karakter sayısını (`length`),
+  - `split(" ")` kullanarak toplam kelime sayısını,
+  - `indexOf("güvenli")` ile belirli bir anahtar kelimenin kaçıncı karakterde başladığını,
+  - Metnin tamamen BÜYÜK harfli ve tamamen küçük harfli halini ekrana yazdırınız.
+
+#### Ödev 3: Palindrom Test Edici (`PalindromKelime.java`)
+- **Gereksinimler:**
+  - Bir kelimenin (Örn: `"kayak"`, `"kabak"`, `"madam"`) tersten okunuşuyla düzden okunuşunun aynı olup olmadığını kontrol ediniz.
+  - Metnin ilk ve son karakterlerini `charAt()`, `length()` ile karşılaştırarak adım adım doğruluğunu ekrana basınız.

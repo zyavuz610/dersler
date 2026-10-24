@@ -24,6 +24,7 @@ Bu rehber, Java programlama dilinde değişken kavramını, değişken tanımlam
    - [Degisken.java: Türler ve Birleştirme](#degiskenjava-türler-ve-birleştirme)
 6. [Örnek Uygulama: Not Ortalaması Hesaplama](#6-örnek-uygulama-not-ortalaması-hesaplama)
 7. [En Çok Yapılan Hatalar ve Çözümleri](#7-en-çok-yapılan-hatalar-ve-çözümleri)
+8. [Alıştırmalar ve Örnek Ödev Programları](#8-alıştırmalar-ve-örnek-ödev-programları)
 
 ---
 
@@ -406,3 +407,37 @@ System.out.println(ortalama); // Çıktı: 77.0 olur (77.5 DEĞİL!)
 double dogruOrtalama = (vize + finalNotu) / 2.0;
 System.out.println(dogruOrtalama); // Çıktı: 77.5 ✅
 ```
+
+---
+
+## 8. Alıştırmalar ve Örnek Ödev Programları
+
+### ✍️ Pratik Sınıf İçi Alıştırmalar:
+1. **Değişken Takası (Swap):** `int a = 10;` ve `int b = 20;` değişkenlerinin değerlerini üçüncü bir geçici değişken (`temp`) kullanarak takas eden programı yazınız. (İşlem sonunda `a=20`, `b=10` olmalı).
+2. **Hassas Bölme Deneyi:** `int pay = 7, payda = 2;` tanımlayınız. `pay / payda` ile `(double) pay / payda` sonuçlarını ekrana yazdırarak farkı gözlemleyiniz.
+3. **Tür Uyumluluğu:** Bir `byte` değişkenine `130` sayısını atamaya çalışarak derleyicinin vereceği hatayı inceleyiniz (`incompatible types: possible lossy conversion from int to byte`).
+
+### 📋 Ödev Programları ve Proje Konuları:
+
+#### Ödev 1: Beden Kitle İndeksi (BKİ) Hesaplayıcı (`VucutKitleIndeksi.java`)
+- **Gereksinimler:**
+  - Bir kişinin kilosunu (`double kilo = 78.5;`) ve boyunu (`double boy = 1.75;`) kod içinde ilk değer atamasıyla tanımlayınız.
+  - Formül: $BKİ = \frac{kilo}{boy \times boy}$
+  - Ağırlık kategorisini belirleyen bir `boolean` değişken tanımlayınız:
+    - `boolean normalMi = (bki >= 18.5) && (bki <= 24.9);`
+  - Kişinin boyunu, kilosunu, hesaplanan BKİ değerini ve normal kiloda olup olmadığını (`true`/`false`) ekrana düzenli bir rapor halinde basınız.
+
+#### Ödev 2: Silindir ve Daire Geometrik Hesaplayıcı (`SilindirHacim.java`)
+- **Gereksinimler:**
+  - Yarıçapı `double r = 4.0;` ve yüksekliği `double h = 20.0;` olan bir silindirin taban alanını ($A = \pi \cdot r^2$) ve hacmini ($V = \pi \cdot r^2 \cdot h$) hesaplayınız.
+  - $\pi$ değeri için `double pi = 3.14159;` kullanınız.
+  - Çıktıyı aşağıdaki formatta ekrana basınız:
+    ```text
+    -----------------------------
+      Şekil      : Silindir
+      Yarıçap (r): 4.0 cm
+      Yükseklik(h): 20.0 cm
+      Taban Alanı: 50.26 cm2
+      Hacim (V)  : 1005.30 cm3
+    -----------------------------
+    ```

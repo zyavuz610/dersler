@@ -24,6 +24,7 @@ Bu rehber, Java programlama dilinde değişkenler ve sabitler üzerinde matemati
 9. [Operatör Önceliği Tablosu](#9-operatör-önceliği-tablosu)
 10. [Örnek Kod: Operator.java Programı](#10-örnek-kod-operatorjava-programı)
 11. [En Sık Yapılan Hatalar ve Tuzaklar](#11-en-sık-yapılan-hatalar-ve-tuzaklar)
+12. [Alıştırmalar ve Örnek Ödev Soruları](#12-alıştırmalar-ve-örnek-ödev-soruları)
 
 ---
 
@@ -236,3 +237,51 @@ Ehliyet VEYA Rapor Var mı? (||)   : true
    - Tam sayılarda sıfıra bölme (`sayi / 0`) programın anında çökmesine (`java.lang.ArithmeticException: / by zero`) neden olur.
 4. **Postfix/Prefix Karışıklığı:**
    - Bir döngü veya yazdırma ifadesi içinde `x++` kullanırken o anki değerin eski değer olduğunu unutmak.
+
+---
+
+## 12. Alıştırmalar ve Örnek Ödev Soruları
+
+### ✍️ Pratik Sınıf İçi Alıştırmalar:
+1. **İfade İzleme (Tracing):** Aşağıdaki kod parçasının ekran çıktısını kod çalıştırmadan önce kağıt üzerinde tahmin ediniz, ardından çalıştırarak doğruluğunu kontrol ediniz:
+   ```java
+   int a = 4;
+   int b = ++a * 2 + a++;
+   System.out.println("a: " + a + ", b: " + b);
+   ```
+2. **Kısa Devre Testi:** Aşağıdaki ifadede `sayac` değerinin neden değişmediğini açıklayınız:
+   ```java
+   int sayac = 10;
+   boolean sonuc = (5 > 2) || (++sayac > 10);
+   System.out.println("Sayaç: " + sayac);
+   ```
+3. **Ternary Pratiği:** Bir sayının pozitif mi, negatif mi yoksa sıfır mı olduğunu tek bir satırda iç içe iki ternary (`? :`) operatörüyle `String durum = ...` olarak belirleyiniz.
+
+### 📋 Ödev Programları ve Proje Konuları:
+
+#### Ödev 1: Artık Yıl (Leap Year) Belirleyici (`ArtikYil.java`)
+- **Amaç:** Bir yılın artık yıl olup olmadığını mantıksal operatörlerle (`&&`, `||`, `%`) tek satırlık bir boolean ifadesiyle belirleyiniz.
+- **Kural:**
+  - Bir yıl 4'e tam bölünmeli VE 100'e bölünmemeli, VEYA 400'e tam bölünmelidir.
+- **Örnek Tanımlama:** `int yil = 2024;`
+- **Beklenen Çıktı:**
+  ```text
+  Yıl: 2024 -> Artık yıl mı? : true (Şubat 29 çeker)
+  ```
+
+#### Ödev 2: ATM Banknot Dağıtıcı Programı (`AtmBanknot.java`)
+- **Amaç:** Bir müşterinin hesabından çekeceği sabit para tutarı (`int cekilecekTutar = 2870;`) için ATM'nin vereceği en az banknot sayısını hesaplayınız.
+- **Kullanılacak Banknotlar:** 200 TL, 100 TL, 50 TL, 20 TL ve 10 TL.
+- **Yöntem:** Bölme (`/`) ve Kalan/Mod (`%`) operatörlerini ardışık olarak kullanınız.
+- **Beklenen Çıktı:**
+  ```text
+  Çekilecek Tutar: 2870 TL
+  -----------------------
+  200 TL : 14 adet
+  100 TL : 0 adet
+   50 TL : 1 adet
+   20 TL : 1 adet
+   10 TL : 0 adet
+  -----------------------
+  Kalan Çekilemeyen: 0 TL
+  ```

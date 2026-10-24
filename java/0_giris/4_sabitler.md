@@ -23,6 +23,7 @@ Bu rehber, Java programlama dilinde **literal (değer sabiti)** kavramını, kay
 3. [İsimlendirilmiş Sabitler (`final` Anahtar Kelimesi)](#3-isimlendirilmiş-sabitler-final-anahtar-kelimesi)
 4. [Örnek Java Programı: Literaller ve Sabitler Gösterimi](#4-örnek-java-programı-literaller-ve-sabitler-gösterimi)
 5. [En Çok Yapılan Hatalar ve Tuzaklar](#5-en-çok-yapılan-hatalar-ve-tuzaklar)
+6. [Alıştırmalar ve Örnek Ödev Konuları](#6-alıştırmalar-ve-örnek-ödev-konuları)
 
 ---
 
@@ -285,3 +286,44 @@ long nufus = 5000000000L;
 final double PI = 3.14;
 PI = 3.1415; // ❌ DERLEME HATASI: cannot assign a value to final variable PI
 ```
+
+---
+
+## 6. Alıştırmalar ve Örnek Ödev Konuları
+
+### ✍️ Pratik Sınıf İçi Alıştırmalar:
+1. **Sayı Tabanı Eşleştirme:** `int a = 0b1101;`, `int b = 017;` ve `int c = 0x2F;` değişkenlerini tanımlayınız. Her birini `System.out.println` ile ekrana yazdırarak onluk sistemdeki karşılıklarını bulunuz.
+2. **Kaçış Karakteri Deneyi:** Tek bir `System.out.println` komutu içinde `\n`, `\t` ve `\"` kullanarak iki satırlı ve tırnak içinde bir atasözü yazdırınız.
+3. **Octal Tuzağı Deneyimi:** Kodunuza `int ay = 08;` yazınız ve derleyicinin verdiği hatayı görerek nedenini açıklayınız.
+
+### 📋 Ödev Programları ve Proje Konuları:
+
+#### Ödev 1: Kafe / Restoran Kasa Fişi Simülasyonu (`KasaFisi.java`)
+- **Gereksinimler:**
+  - `final double KDV_ORANI = 0.20;` ve `final String RESTORAN_ADI = "Java Kafe & Bistro";` sabitlerini tanımlayınız.
+  - 3 farklı sipariş kalemini (Örn: Çorba, Ana Yemek, İçecek) sabit fiyatlarıyla kod içinde tanımlayınız.
+  - Ara toplamı, uygulanan KDV tutarını ve toplam ödenecek hesabı hesaplayınız.
+  - Çıktıyı `\t` (sekme) ve `\n` kaçış karakterleriyle hizalayarak gerçek bir rulo fiş görünümünde konsola basınız:
+    ```text
+    ==================================
+           JAVA KAFE & BISTRO         
+    ==================================
+    Ürün            Adet    Fiyat     
+    ----------------------------------
+    Mercimek Çorba   1      60.00 TL
+    Tavuk Sote       1     140.00 TL
+    Ayran            1      25.00 TL
+    ----------------------------------
+    Ara Toplam            : 225.00 TL
+    KDV (%20)             :  45.00 TL
+    GENEL TOPLAM          : 270.00 TL
+    ==================================
+    ```
+
+#### Ödev 2: Bilimsel Değerler ve Sabitler Tablosu (`FizikSabitleri.java`)
+- **Gereksinimler:**
+  - Evrensel fiziksel sabitleri `final` anahtar kelimesiyle ve bilimsel E-notasyonuyla tanımlayınız:
+    - Işık Hızı: $c = 3.0 \times 10^8$ m/s (`3.0e8`)
+    - Planck Sabiti: $h = 6.626 \times 10^{-34}$ (`6.626e-34`)
+    - Avogadro Sayısı: $N_A = 6.022 \times 10^{23}$ (`6.022e23`)
+  - Değerleri Unicode simgeleriyle birlikte (örn: derece işareti veya özel birimler) ekrana basınız.

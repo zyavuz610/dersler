@@ -22,6 +22,7 @@ Bu doküman, Java programlama diline giriş yapan öğrenciler ve eğitmenler i�
    - [JDK, JRE ve JVM İlişkisi](#jdk-jre-ve-jvm-ilişkisi)
    - [Komut Satırında (Terminal) Derleme ve Çalıştırma](#komut-satırında-terminal-derleme-ve-çalıştırma)
 5. [Yeni Başlayanlar İçin Önemli Kurallar ve Sık Yapılan Hatalar](#5-yeni-başlayanlar-için-önemli-kurallar-ve-sık-yapılan-hatalar)
+6. [Alıştırmalar ve Örnek Ödev Soruları](#6-alıştırmalar-ve-örnek-ödev-soruları)
 
 ---
 
@@ -224,3 +225,31 @@ Merhaba Dünya
    - Açılan her süslü parantez (`{`), normal parantez (`(`) ve köşeli parantez (`[`) mutlaka eşiyle kapatılmalıdır.
    - Özellikle sınıf ve metot bloklarını belirleyen süslü parantezlerin (`{ }`) eksik bırakılması veya fazladan yazılması; `reached end of file while parsing` ya da `class, interface, or enum expected` gibi yeni başlayanların en sık karşılaştığı derleme hatalarına sebep olur.
    - **İpucu:** Kod girintilemesine (indentation) özen göstermek, hangi parantezin nerede açılıp kapandığını görmeyi çok kolaylaştırır.
+
+---
+
+## 6. Alıştırmalar ve Örnek Ödev Soruları
+
+### ✍️ Pratik Sınıf İçi Alıştırmalar:
+1. **Hata Yakalama Alıştırması:** Bilgisayarınızda `test.java` (küçük harfle) adında bir dosya oluşturup içine `public class Test { ... }` yazınız. `javac test.java` komutunu çalıştırarak derleyicinin verdiği uyarıyı/hatayı inceleyiniz ve dosya adını düzelterek tekrar deneyiniz.
+2. **Kişisel Tanıtım Programı:** Adınızı, üniversitenizi ve Java öğrenme amacınızı alt alta 3 satır halinde konsola yazdıran `BenimBilgilerim.java` programını yazıp terminalden derleyip çalıştırınız.
+3. **Bytecode İnceleme:** Derleme sonrasında oluşan `Main.class` dosyasını terminalde `cat Main.class` komutuyla açmaya çalışınız. Karşınıza çıkan anlamsız karakterlerin nedenini ve bayt kodunun JVM için ne ifade ettiğini düşününüz.
+
+### 📋 Ödev Programları ve Proje Konuları:
+
+#### Ödev 1: ASCII Karakter Sanatı ile Ev Çizimi (`EvCizimi.java`)
+- **Amaç:** Konsol çıktısı (`println`) komutlarını ve kaçış karakterlerini kullanarak terminal ekranına yıldızlar (`*`) ve çizgiler (`/`, `\`, `_`, `|`) yardımıyla bir çatı, duvarlar, kapı ve pencere içeren bir ev resmi çizdiriniz.
+- **Beklenen Çıktı Örneği:**
+  ```text
+       /\
+      /  \
+     /____\
+     | [] |
+     |  _ |
+     |__| |
+  ```
+
+#### Ödev 2: Mini Nesne Tasarımı (`Kitaplik.java`)
+- **Amaç:** `Kitap` adında bir sınıf oluşturunuz. Sınıfın `baslik`, `yazar` ve `sayfaSayisi` alanları olsun.
+- `Kitaplik.java` dosyasındaki `main` metodu içinde `new` anahtar kelimesi ile 2 farklı kitap nesnesi üretiniz (`kitap1`, `kitap2`).
+- Her kitabın bilgilerini ekrana düzenli bir kart vizit gibi yazdırınız.

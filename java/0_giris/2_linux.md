@@ -13,6 +13,7 @@ Bu rehber, en sık kullanılan temel Linux komutlarını, parametrelerini ve pra
 4. [Sistem ve Ortam Bilgisi Alma](#4-sistem-ve-ortam-bilgisi-alma)
 5. [Pratik: Terminalde Bir Java Projesi İş Akışı](#5-pratik-terminalde-bir-java-projesi-iş-akışı)
 6. [Hayat Kurtaran Terminal Kısayolları](#6-hayat-kurtaran-terminal-kısayolları)
+7. [Terminal Alıştırmaları ve Uygulama Görevleri](#7-terminal-alıştırmaları-ve-uygulama-görevleri)
 
 ---
 
@@ -144,3 +145,28 @@ Terminalde hızlı ve hatasız çalışmak için bu kısayolları alışkanlık 
   - `clear` komutu gibi ekranı temizler ve imleci en üste alır.
 - **`history`:**
   - Daha önce terminalde yazdığınız komutların geçmişini numaralı olarak listeler.
+
+---
+
+## 7. Terminal Alıştırmaları ve Uygulama Görevleri
+
+### ✍️ Hızlı Terminal Alıştırmaları:
+1. **İç İçe Klasör Oluşturma:** Tek bir `mkdir` komutu kullanarak `java_lab/hafta_1/kodlar` yolunu oluşturunuz (`mkdir -p` parametresini araştırınız).
+2. **Gizli Dosyaları Bulma:** Ana dizininize (`cd ~`) geçerek `ls -la` komutunu çalıştırınız. Başında nokta (`.`) olan en az 3 dosya veya klasör tespit ediniz (Örn: `.bashrc`, `.gitconfig`).
+3. **Kombinasyonlu Liste:** Dosyaları boyutlarına göre sıralı listelemek için `ls -lhS` komutunu deneyiniz ve parametrelerin ne işe yaradığını not ediniz.
+
+### 📋 Ödev ve Uygulama Görevi:
+
+#### Ödev: "Terminal Şampiyonu" Uçtan Uca Senaryo
+Aşağıdaki adımları **yalnızca terminal komutları kullanarak** (grafik arayüze hiç dokunmadan) sırasıyla gerçekleştiriniz ve çalıştırdığınız komutları bir metin dosyasına kaydediniz:
+
+1. `pwd` ile bulunduğunuz dizini görüntüleyiniz.
+2. `proje_odevi` adında bir klasör oluşturup içine giriniz (`cd proje_odevi`).
+3. `touch IlkDeneme.java` komutuyla boş bir Java kaynak dosyası oluşturunuz.
+4. Dosyayı yedeklemek için `cp IlkDeneme.java YedekDeneme.java` komutunu çalıştırınız.
+5. `ls -l` ile iki dosyanın da klasörde olduğunu doğrulayınız.
+6. `mv YedekDeneme.java EskiDeneme.java` ile yedeğin adını değiştiriniz.
+7. `rm EskiDeneme.java` ile değiştirdiğiniz dosyayı siliniz.
+8. Bir üst dizine çıkınız (`cd ..`).
+9. `proje_odevi` klasörünü ve içindeki tüm dosyaları tek komutla siliniz (`rm -r proje_odevi`).
+10. `history` komutuyla bu süreçte yazdığınız tüm komutların çıktısını alınız.
