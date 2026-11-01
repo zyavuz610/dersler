@@ -431,3 +431,4 @@ Standart `System.out.println("Merhaba");` ifadesini `import static` kullanarak `
 1. Kendi yazdığınız matematiksel araçları içeren `com.matematik.araclar` paketini derleyiniz.
 2. Terminalde `jar -cvf matematik-araclar.jar com/matematik/araclar/*.class` komutuyla bir **JAR (Java Archive)** dosyası üretiniz.
 3. Tamamen farklı bir klasörde yeni bir proje açıp, oluşturduğunuz bu `.jar` dosyasını `CLASSPATH` olarak projeye bağlayınız ve sınıflarınızı içe aktararak çalıştırınız.
+

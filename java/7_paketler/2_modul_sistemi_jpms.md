@@ -305,3 +305,4 @@ module com.proje {
 **Gereksinimler:**
 1. Konsola güncel tarihi ve sistem özelliklerini basan modüler bir Java konsol projesi yazınız.
 2. Terminalde `jlink` komutunu kullanarak yalnızca projenizin ve `java.base`'in dahil edildiği, hedef bilgisayarda Java kurulu olmasa dahi çalışan mini bir çalışma ortamı (*custom runtime image*) oluşturunuz ve boyutunu standart JDK ile kıyaslayınız.
+

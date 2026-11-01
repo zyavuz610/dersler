@@ -697,3 +697,4 @@ public class IsGunuSayar {
    - Tokyo (`Asia/Tokyo`)
    - Sidney (`Australia/Sydney`)
 4. Eğer katılımcılardan birinin yerel saati gece 22:00 ile sabah 08:00 arasına denk geliyorsa program uyarı mesajı vermelidir: `"⚠️ DİKKAT: Tokyo için toplantı saati mesai/uyku saatleri dışındadır!"`.
+

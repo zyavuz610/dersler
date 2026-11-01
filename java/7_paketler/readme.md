@@ -22,3 +22,7 @@ flowchart TD
 | :---: | :--- | :--- | :--- |
 | **01** | [**1_paketler_ve_import.md**](./1_paketler_ve_import.md) | **Paketler ve İçe Aktarma** | • Fiziksel klasör mimarisi ve isim çakışmasını (*Name Collision*) önleme<br>• Ters alan adı standardı (`com.sirket.proje`) ve dizin eşleşme zorunluluğu<br>• `import` vs. `import static` kullanımı ve otomatik `java.lang` paketi<br>• Paket erişim belirleyicileri (*package-private*), `javac -d` ile derleme ve CLASSPATH |
 | **02** | [**2_modul_sistemi_jpms.md**](./2_modul_sistemi_jpms.md) | **Java 9 Modül Sistemi (JPMS)** | • Klasik Java sorunları: "JAR Hell" ve monolitik `rt.jar` kütüphane karmaşası<br>• "Paketlerin paketi" mantığı ve `module-info.java` anatomisi<br>• `exports`, `requires`, `requires transitive`, `opens` direktifleri ve güçlü kapsülleme<br>• Çekirdek modül `java.base` ve `jlink` ile hafif (mini) Java çalışma ortamları üretme |
+
+---
+
+> 🔜 **Sonraki Eğitim Modülü:** [8. Modül: Java İleri Seviye Konular ve Profesyonel Yazılım Geliştirme (8_ileri konular/readme.md)](../8_ileri%20konular/readme.md)

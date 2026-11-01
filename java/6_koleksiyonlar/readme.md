@@ -37,3 +37,7 @@ flowchart TD
 | **05** | [**5_map_ve_anahtar_deger.md**](./5_map_ve_anahtar_deger.md) | **Map Arayüzü (Anahtar - Değer)** | • `Map` arayüzü ve sözlük mimarisi (benzersiz anahtar $\rightarrow$ değer eşleşmesi)<br>• Neden `Collection` arayüzünden türemez? (`K, V` çifti doğası)<br>• En hızlı sözlük `HashMap` ($O(1)$) ve sıra garantisizliği<br>• Ekleme/erişim sıralı `LinkedHashMap` (LRU Cache mantığı) ve anahtarları sıralı `TreeMap`<br>• Map üzerinde gezinme yolları: `keySet()`, `values()`, `entrySet()` ve Java 8 `forEach` |
 | **06** | [**6_iterator_ve_siralama_araclari.md**](./6_iterator_ve_siralama_araclari.md) | **Iterator, Sıralama & Araçlar** | • `Iterator` ile gezinme ve `ConcurrentModificationException` tuzağından korunma (`it.remove()`)<br>• Nesneleri sıralama: `Comparable` (doğal sıralama) vs. `Comparator` (esnek/çoklu sıralama)<br>• `java.util.Collections` yardımcı sınıfı: `sort()`, `reverse()`, `shuffle()`, `min()`, `max()`, `frequency()`<br>• Java 9+ değiştirilemez koleksiyon fabrikaları: `List.of()`, `Set.of()`, `Map.of()` kuralları |
 
+---
+
+> 🔜 **Sonraki Eğitim Modülü:** [7. Modül: Java'da Paketler ve Modül Sistemi (7_paketler/readme.md)](../7_paketler/readme.md)
+
