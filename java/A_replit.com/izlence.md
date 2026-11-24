@@ -27,3 +27,9 @@
 * genel tekrar, md dosyaları üzerinden
 * String konusu
 * alıştırma ve uygulama yapılmadı, sonraki ders yapalım...
+
+# 5. hafta
+* for döngüsü 
+* break ve continue anahtar kelimeleri
+* iç içe döngüler
+* Örnekler ve uygulamalar
