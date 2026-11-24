@@ -58,5 +58,11 @@
 * sürec PCB
 * süreç bağlam değiştirme
 
-
+# 6. hafta
+* derse gelen olmadı
+* thread konusu işlenecekti,
+  * process görüntüle, her biri ayrı bellek
+  * aynı process içinde thread çalıştır
+  * thread fonk. tanımla
+  * thread fonksiyonuna parametre aktar
 

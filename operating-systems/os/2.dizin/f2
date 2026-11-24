@@ -1,0 +1,3 @@
+ls
+echo "---------------------"
+cat /etc/os-release
